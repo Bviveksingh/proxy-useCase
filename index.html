@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link href="./dp-light.css" rel="stylesheet"> -->
+    <!-- <script defer src="./datepicker.js"></script> -->
+    <link href="./main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="date-input">Select Date</label>
+    <input type="date" id="date-input" name="date-input" onchange="takeInput(this.value)">
+    <button onclick="getImage()">Get Images</button>
+    <div id="images">
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
