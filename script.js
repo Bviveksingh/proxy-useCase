@@ -1,5 +1,5 @@
 
-const apiKey = 'myRdRcaNbM1BpfFYa2ciLJh16BjFueQ3f5Yc2TBW';
+const apiKey = '<YOUR API KEY>';
 
 window.addEventListener("load", () => { 
     // Creates input state in the localStorage
@@ -19,13 +19,11 @@ const handler = {
             return target[date];
         }
         else{
-            console.log('Date inside', date);
             const dataRaw = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`, {
                 method : "GET",
                 mode: 'cors',
             });
             const dataClean = await dataRaw.json();
-            console.log('Dataclean', dataClean);
             target[date] = dataClean.hdurl;
             window.localStorage.setItem("inputState", JSON.stringify(target));
             return dataClean.hdurl;
